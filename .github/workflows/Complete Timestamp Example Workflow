@@ -1,0 +1,18 @@
+name: Complete Timestamp Example Workflow
+
+on: [push, workflow_dispatch]
+
+jobs:
+  # This is your first existing job
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "The first job is running."
+
+  # This is the second job you are adding
+  print-timestamp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print current timestamp
+        run: date
